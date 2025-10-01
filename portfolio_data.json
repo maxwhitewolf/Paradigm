@@ -1,0 +1,1871 @@
+[
+  {
+    "slug": "uniswap",
+    "name": "Uniswap",
+    "featured": true,
+    "category": "DeFi: DEX",
+    "chains": [
+      "Multi-chain",
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Intents / Orderflow",
+      "NFTs"
+    ],
+    "summary": "Decentralized crypto exchange protocol",
+    "logoUrl": "/portfolio-logos/uniswap.avif",
+    "quick": {
+      "blurb": "Decentralized crypto exchange protocol",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "EVM",
+        "Intents / Orderflow"
+      ]
+    }
+  },
+  {
+    "slug": "coinbase",
+    "name": "Coinbase",
+    "featured": true,
+    "category": "CEX / Brokerage",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "Compliance / Tax"
+    ],
+    "summary": "Crypto exchange and wallet",
+    "logoUrl": "/portfolio-logos/coinbase.avif",
+    "quick": {
+      "blurb": "Crypto exchange and wallet",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "Compliance / Tax"
+      ]
+    }
+  },
+  {
+    "slug": "optimism",
+    "name": "Optimism",
+    "featured": true,
+    "category": "L2 / Scaling",
+    "chains": [
+      "OP Stack",
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Rollups"
+    ],
+    "summary": "Layer 2 blockchain",
+    "logoUrl": "/portfolio-logos/optimism.avif",
+    "quick": {
+      "blurb": "Layer 2 blockchain",
+      "helped": [],
+      "uses": [
+        "OP Stack",
+        "EVM",
+        "Rollups"
+      ]
+    }
+  },
+  {
+    "slug": "phantom",
+    "name": "Phantom",
+    "featured": true,
+    "category": "Wallets",
+    "chains": [
+      "Solana",
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "Account Abstraction",
+      "NFTs"
+    ],
+    "summary": "Web3 wallet",
+    "logoUrl": "/portfolio-logos/phantom.avif",
+    "quick": {
+      "blurb": "Web3 wallet",
+      "helped": [],
+      "uses": [
+        "Solana",
+        "Multi-chain",
+        "Account Abstraction"
+      ]
+    }
+  },
+  {
+    "slug": "fireblocks",
+    "name": "Fireblocks",
+    "featured": true,
+    "category": "Payments / Treasury",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [],
+    "summary": "Crypto wallet as a service",
+    "logoUrl": "/portfolio-logos/fireblocks.avif",
+    "quick": {
+      "blurb": "Crypto wallet as a service",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A"
+      ]
+    }
+  },
+  {
+    "slug": "kalshi",
+    "name": "Kalshi",
+    "featured": true,
+    "category": "Prediction / Decision Markets",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [],
+    "summary": "Prediction market platform",
+    "logoUrl": "/portfolio-logos/kalshi.avif",
+    "quick": {
+      "blurb": "Prediction market platform",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A"
+      ]
+    }
+  },
+  {
+    "slug": "flashbots",
+    "name": "Flashbots",
+    "featured": true,
+    "category": "MEV / Market Mechanisms",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "MEV",
+      "Research / Education"
+    ],
+    "summary": "MEV infrastructure and research",
+    "logoUrl": "/portfolio-logos/flashbots.avif",
+    "quick": {
+      "blurb": "MEV infrastructure and research",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "MEV",
+        "Research / Education"
+      ]
+    }
+  },
+  {
+    "slug": "privy",
+    "name": "Privy",
+    "featured": true,
+    "category": "Wallets",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Account Abstraction"
+    ],
+    "summary": "Embedded wallet infrastructure",
+    "logoUrl": "/portfolio-logos/privy.avif",
+    "quick": {
+      "blurb": "Embedded wallet infrastructure",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Account Abstraction"
+      ]
+    }
+  },
+  {
+    "slug": "paradigm",
+    "name": "Paradigm",
+    "featured": false,
+    "category": "Other",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [],
+    "summary": "Crypto research and investment firm",
+    "logoUrl": "/portfolio-logos/paradigm.avif",
+    "quick": {
+      "blurb": "Crypto research and investment firm",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A"
+      ]
+    }
+  },
+  {
+    "slug": "across",
+    "name": "Across",
+    "featured": false,
+    "category": "Bridge",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Bridges"
+    ],
+    "summary": "Crosschain bridging protocol",
+    "logoUrl": "/portfolio-logos/across.avif",
+    "quick": {
+      "blurb": "Crosschain bridging protocol",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Bridges"
+      ]
+    }
+  },
+  {
+    "slug": "agora",
+    "name": "Agora",
+    "featured": false,
+    "category": "DeFi: Stablecoin",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Stablecoins"
+    ],
+    "summary": "Stablecoin infrastructure platform",
+    "logoUrl": "/portfolio-logos/agora.avif",
+    "quick": {
+      "blurb": "Stablecoin infrastructure platform",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Stablecoins"
+      ]
+    }
+  },
+  {
+    "slug": "amber",
+    "name": "Amber",
+    "featured": false,
+    "category": "CEX / Brokerage",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Crypto financial services platform",
+    "logoUrl": "/portfolio-logos/amber.avif",
+    "quick": {
+      "blurb": "Crypto financial services platform",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "ai-arena",
+    "name": "AI Arena",
+    "featured": false,
+    "category": "Gaming",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Gaming",
+      "AI Agents",
+      "NFTs"
+    ],
+    "summary": "AI-powered NFT gaming",
+    "logoUrl": "/portfolio-logos/ai-arena.avif",
+    "quick": {
+      "blurb": "AI-powered NFT gaming",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Gaming",
+        "AI Agents"
+      ]
+    }
+  },
+  {
+    "slug": "argent",
+    "name": "Argent",
+    "featured": false,
+    "category": "Wallets",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Account Abstraction"
+    ],
+    "summary": "DeFi wallet",
+    "logoUrl": "/portfolio-logos/argent.avif",
+    "quick": {
+      "blurb": "DeFi wallet",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Account Abstraction"
+      ]
+    }
+  },
+  {
+    "slug": "axiom",
+    "name": "Axiom",
+    "featured": false,
+    "category": "Data / Indexing",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "ZK",
+      "Data Ownership"
+    ],
+    "summary": "Trustlessly compute over Ethereum data",
+    "logoUrl": "/portfolio-logos/axiom.avif",
+    "quick": {
+      "blurb": "Trustlessly compute over Ethereum data",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "ZK",
+        "Data Ownership"
+      ]
+    }
+  },
+  {
+    "slug": "aztec",
+    "name": "Aztec",
+    "featured": false,
+    "category": "L2 / Scaling",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Privacy",
+      "ZK",
+      "Rollups"
+    ],
+    "summary": "Privacy-first Layer 2 on Ethereum",
+    "logoUrl": "/portfolio-logos/aztec.avif",
+    "quick": {
+      "blurb": "Privacy-first Layer 2 on Ethereum",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Privacy",
+        "ZK"
+      ]
+    }
+  },
+  {
+    "slug": "babylon",
+    "name": "Babylon",
+    "featured": false,
+    "category": "Staking / Restaking",
+    "chains": [
+      "Bitcoin"
+    ],
+    "focusTopics": [
+      "Staking"
+    ],
+    "summary": "Trustless Bitcoin staking",
+    "logoUrl": "/portfolio-logos/babylon.avif",
+    "quick": {
+      "blurb": "Trustless Bitcoin staking",
+      "helped": [],
+      "uses": [
+        "Bitcoin",
+        "Staking"
+      ]
+    }
+  },
+  {
+    "slug": "betdex",
+    "name": "BetDex",
+    "featured": false,
+    "category": "DeFi: Derivatives",
+    "chains": [
+      "Solana",
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Decentralized sports betting protocol",
+    "logoUrl": "/portfolio-logos/betdex.avif",
+    "quick": {
+      "blurb": "Decentralized sports betting protocol",
+      "helped": [],
+      "uses": [
+        "Solana",
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "bitso",
+    "name": "Bitso",
+    "featured": false,
+    "category": "CEX / Brokerage",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Digital currency exchange",
+    "logoUrl": "/portfolio-logos/bitso.avif",
+    "quick": {
+      "blurb": "Digital currency exchange",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "blast",
+    "name": "Blast",
+    "featured": false,
+    "category": "L2 / Scaling",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Staking"
+    ],
+    "summary": "Ethereum Layer 2 with native yield",
+    "logoUrl": "/portfolio-logos/blast.avif",
+    "quick": {
+      "blurb": "Ethereum Layer 2 with native yield",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Staking"
+      ]
+    }
+  },
+  {
+    "slug": "blowfish",
+    "name": "Blowfish",
+    "featured": false,
+    "category": "Security / Audit",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "Security"
+    ],
+    "summary": "Proactive defense for web3 wallets",
+    "logoUrl": "/portfolio-logos/blowfish.avif",
+    "quick": {
+      "blurb": "Proactive defense for web3 wallets",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "Security"
+      ]
+    }
+  },
+  {
+    "slug": "blur",
+    "name": "Blur",
+    "featured": false,
+    "category": "NFT / Media",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "NFTs"
+    ],
+    "summary": "NFT marketplace for pro traders",
+    "logoUrl": "/portfolio-logos/blur.avif",
+    "quick": {
+      "blurb": "NFT marketplace for pro traders",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "NFTs"
+      ]
+    }
+  },
+  {
+    "slug": "chainalysis",
+    "name": "Chainalysis",
+    "featured": false,
+    "category": "Data / Indexing",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "Compliance / Tax"
+    ],
+    "summary": "Blockchain data platform",
+    "logoUrl": "/portfolio-logos/chainalysis.avif",
+    "quick": {
+      "blurb": "Blockchain data platform",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "Compliance / Tax"
+      ]
+    }
+  },
+  {
+    "slug": "citadel-securities",
+    "name": "Citadel Securities",
+    "featured": false,
+    "category": "Market Maker / Liquidity",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [],
+    "summary": "Global market maker",
+    "logoUrl": "/portfolio-logos/citadel-securities.avif",
+    "quick": {
+      "blurb": "Global market maker",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A"
+      ]
+    }
+  },
+  {
+    "slug": "code4rena",
+    "name": "Code4rena",
+    "featured": false,
+    "category": "Security / Audit",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [
+      "Research / Education"
+    ],
+    "summary": "Smart contract security marketplace",
+    "logoUrl": "/portfolio-logos/code4rena.avif",
+    "quick": {
+      "blurb": "Smart contract security marketplace",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A",
+        "Research / Education"
+      ]
+    }
+  },
+  {
+    "slug": "coinswitch",
+    "name": "CoinSwitch",
+    "featured": false,
+    "category": "CEX / Brokerage",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Crypto exchange in India",
+    "logoUrl": "/portfolio-logos/coinswitch.avif",
+    "quick": {
+      "blurb": "Crypto exchange in India",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "compound",
+    "name": "Compound",
+    "featured": false,
+    "category": "DeFi: Lending",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [],
+    "summary": "Lending protocol on Ethereum",
+    "logoUrl": "/portfolio-logos/compound.avif",
+    "quick": {
+      "blurb": "Lending protocol on Ethereum",
+      "helped": [],
+      "uses": [
+        "EVM"
+      ]
+    }
+  },
+  {
+    "slug": "conduit",
+    "name": "Conduit",
+    "featured": false,
+    "category": "Infra / Dev Tools",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Rollups"
+    ],
+    "summary": "Rollup-as-a-service infrastructure platform",
+    "logoUrl": "/portfolio-logos/conduit.avif",
+    "quick": {
+      "blurb": "Rollup-as-a-service infrastructure platform",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Rollups"
+      ]
+    }
+  },
+  {
+    "slug": "cosmos",
+    "name": "Cosmos (ATOM)",
+    "featured": false,
+    "category": "L1",
+    "chains": [
+      "Cosmos"
+    ],
+    "focusTopics": [],
+    "summary": "Blockchain application platform",
+    "logoUrl": "/portfolio-logos/cosmos.avif",
+    "quick": {
+      "blurb": "Blockchain application platform",
+      "helped": [],
+      "uses": [
+        "Cosmos"
+      ]
+    }
+  },
+  {
+    "slug": "d3",
+    "name": "D3",
+    "featured": false,
+    "category": "Identity / Naming",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Bringing domains on-chain",
+    "logoUrl": "/portfolio-logos/d3.avif",
+    "quick": {
+      "blurb": "Bringing domains on-chain",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "dework",
+    "name": "Dework",
+    "featured": false,
+    "category": "Infra / Dev Tools",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "Governance"
+    ],
+    "summary": "Web3-native project management",
+    "logoUrl": "/portfolio-logos/dework.avif",
+    "quick": {
+      "blurb": "Web3-native project management",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "Governance"
+      ]
+    }
+  },
+  {
+    "slug": "dydx",
+    "name": "dYdX",
+    "featured": false,
+    "category": "DeFi: Derivatives",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Perpetuals"
+    ],
+    "summary": "Decentralized perpetuals exchange",
+    "logoUrl": "/portfolio-logos/dydx.avif",
+    "quick": {
+      "blurb": "Decentralized perpetuals exchange",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Perpetuals"
+      ]
+    }
+  },
+  {
+    "slug": "ellipsis-labs",
+    "name": "Ellipsis Labs",
+    "featured": false,
+    "category": "DeFi: DEX",
+    "chains": [
+      "Solana"
+    ],
+    "focusTopics": [
+      "Intents / Orderflow"
+    ],
+    "summary": "Orderbook-based exchange on Solana",
+    "logoUrl": "/portfolio-logos/ellipsis-labs.avif",
+    "quick": {
+      "blurb": "Orderbook-based exchange on Solana",
+      "helped": [],
+      "uses": [
+        "Solana",
+        "Intents / Orderflow"
+      ]
+    }
+  },
+  {
+    "slug": "euler",
+    "name": "Euler",
+    "featured": false,
+    "category": "DeFi: Lending",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [],
+    "summary": "Permissionless lending protocol",
+    "logoUrl": "/portfolio-logos/euler.avif",
+    "quick": {
+      "blurb": "Permissionless lending protocol",
+      "helped": [],
+      "uses": [
+        "EVM"
+      ]
+    }
+  },
+  {
+    "slug": "exponential",
+    "name": "Exponential",
+    "featured": false,
+    "category": "Data / Indexing",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "DeFi investment discovery platform",
+    "logoUrl": "/portfolio-logos/exponential.avif",
+    "quick": {
+      "blurb": "DeFi investment discovery platform",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "farcaster",
+    "name": "Farcaster",
+    "featured": false,
+    "category": "Social",
+    "chains": [
+      "OP Stack"
+    ],
+    "focusTopics": [
+      "Social Graph"
+    ],
+    "summary": "Decentralized social network",
+    "logoUrl": "/portfolio-logos/farcaster.avif",
+    "quick": {
+      "blurb": "Decentralized social network",
+      "helped": [],
+      "uses": [
+        "OP Stack",
+        "Social Graph"
+      ]
+    }
+  },
+  {
+    "slug": "fractal",
+    "name": "Fractal",
+    "featured": false,
+    "category": "NFT / Media",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "NFTs",
+      "Gaming"
+    ],
+    "summary": "Gaming NFT marketplace",
+    "logoUrl": "/portfolio-logos/fractal.avif",
+    "quick": {
+      "blurb": "Gaming NFT marketplace",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "NFTs",
+        "Gaming"
+      ]
+    }
+  },
+  {
+    "slug": "friend-tech",
+    "name": "friend.tech",
+    "featured": false,
+    "category": "Social",
+    "chains": [
+      "OP Stack"
+    ],
+    "focusTopics": [
+      "Social Graph",
+      "NFTs"
+    ],
+    "summary": "New social experiences",
+    "logoUrl": "/portfolio-logos/friend-tech.avif",
+    "quick": {
+      "blurb": "New social experiences",
+      "helped": [],
+      "uses": [
+        "OP Stack",
+        "Social Graph",
+        "NFTs"
+      ]
+    }
+  },
+  {
+    "slug": "gauntlet",
+    "name": "Gauntlet",
+    "featured": false,
+    "category": "MEV / Market Mechanisms",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "Risk"
+    ],
+    "summary": "DeFi risk management",
+    "logoUrl": "/portfolio-logos/gauntlet.avif",
+    "quick": {
+      "blurb": "DeFi risk management",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "Risk"
+      ]
+    }
+  },
+  {
+    "slug": "genesis-digital-assets",
+    "name": "Genesis Digital Assets",
+    "featured": false,
+    "category": "Mining / Hardware",
+    "chains": [
+      "Bitcoin"
+    ],
+    "focusTopics": [
+      "DePIN / Hardware"
+    ],
+    "summary": "Bitcoin mining company",
+    "logoUrl": "/portfolio-logos/genesis-digital-assets.avif",
+    "quick": {
+      "blurb": "Bitcoin mining company",
+      "helped": [],
+      "uses": [
+        "Bitcoin",
+        "DePIN / Hardware"
+      ]
+    }
+  },
+  {
+    "slug": "gitcoin",
+    "name": "Gitcoin",
+    "featured": false,
+    "category": "Infra / Dev Tools",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Research / Education",
+      "Governance"
+    ],
+    "summary": "Developer community platform",
+    "logoUrl": "/portfolio-logos/gitcoin.avif",
+    "quick": {
+      "blurb": "Developer community platform",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Research / Education",
+        "Governance"
+      ]
+    }
+  },
+  {
+    "slug": "gte",
+    "name": "GTE",
+    "featured": false,
+    "category": "DeFi: DEX",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Decentralized global exchange",
+    "logoUrl": "/portfolio-logos/gte.avif",
+    "quick": {
+      "blurb": "Decentralized global exchange",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "hang",
+    "name": "Hang",
+    "featured": false,
+    "category": "NFT / Media",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "NFTs",
+      "Loyalty"
+    ],
+    "summary": "Web3 powered platform for brand loyalty",
+    "logoUrl": "/portfolio-logos/hang.avif",
+    "quick": {
+      "blurb": "Web3 powered platform for brand loyalty",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "NFTs",
+        "Loyalty"
+      ]
+    }
+  },
+  {
+    "slug": "harmonic",
+    "name": "Harmonic",
+    "featured": false,
+    "category": "AI / ML",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [
+      "Research / Education"
+    ],
+    "summary": "Mathematical reasoning engine",
+    "logoUrl": "/portfolio-logos/harmonic.avif",
+    "quick": {
+      "blurb": "Mathematical reasoning engine",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A",
+        "Research / Education"
+      ]
+    }
+  },
+  {
+    "slug": "irreducible",
+    "name": "Irreducible",
+    "featured": false,
+    "category": "Privacy / ZK",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [
+      "ZK",
+      "DePIN / Hardware"
+    ],
+    "summary": "Hardware acceleration for zero-knowledge proofs",
+    "logoUrl": "/portfolio-logos/irreducible.avif",
+    "quick": {
+      "blurb": "Hardware acceleration for zero-knowledge proofs",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A",
+        "ZK",
+        "DePIN / Hardware"
+      ]
+    }
+  },
+  {
+    "slug": "ithaca",
+    "name": "Ithaca",
+    "featured": false,
+    "category": "Infra / Dev Tools",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Research / Education"
+    ],
+    "summary": "Open source crypto development",
+    "logoUrl": "/portfolio-logos/ithaca.avif",
+    "quick": {
+      "blurb": "Open source crypto development",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Research / Education"
+      ]
+    }
+  },
+  {
+    "slug": "jambo",
+    "name": "Jambo",
+    "featured": false,
+    "category": "Infra / Dev Tools",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Web3 technology ecosystem for emerging markets",
+    "logoUrl": "/portfolio-logos/jambo.avif",
+    "quick": {
+      "blurb": "Web3 technology ecosystem for emerging markets",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "keep-network",
+    "name": "Keep Network",
+    "featured": false,
+    "category": "Privacy / ZK",
+    "chains": [
+      "Ethereum / EVM",
+      "Bitcoin"
+    ],
+    "focusTopics": [
+      "Privacy"
+    ],
+    "summary": "Blockchain privacy solution",
+    "logoUrl": "/portfolio-logos/keep-network.avif",
+    "quick": {
+      "blurb": "Blockchain privacy solution",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Bitcoin",
+        "Privacy"
+      ]
+    }
+  },
+  {
+    "slug": "kuru-labs",
+    "name": "Kuru Labs",
+    "featured": false,
+    "category": "DeFi: DEX",
+    "chains": [
+      "Monad"
+    ],
+    "focusTopics": [
+      "Orderflow"
+    ],
+    "summary": "Onchain orderbook for Monad",
+    "logoUrl": "/portfolio-logos/kuru-labs.avif",
+    "quick": {
+      "blurb": "Onchain orderbook for Monad",
+      "helped": [],
+      "uses": [
+        "Monad",
+        "Orderflow"
+      ]
+    }
+  },
+  {
+    "slug": "lido",
+    "name": "Lido",
+    "featured": false,
+    "category": "Staking / Restaking",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Staking"
+    ],
+    "summary": "Decentralized Ethereum staking protocol",
+    "logoUrl": "/portfolio-logos/lido.avif",
+    "quick": {
+      "blurb": "Decentralized Ethereum staking protocol",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Staking"
+      ]
+    }
+  },
+  {
+    "slug": "lightspark",
+    "name": "Lightspark",
+    "featured": false,
+    "category": "Payments / Treasury",
+    "chains": [
+      "Bitcoin"
+    ],
+    "focusTopics": [
+      "Payments"
+    ],
+    "summary": "Bitcoin payment infrastructure",
+    "logoUrl": "/portfolio-logos/lightspark.avif",
+    "quick": {
+      "blurb": "Bitcoin payment infrastructure",
+      "helped": [],
+      "uses": [
+        "Bitcoin",
+        "Payments"
+      ]
+    }
+  },
+  {
+    "slug": "limit-break",
+    "name": "Limit Break",
+    "featured": false,
+    "category": "Gaming",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Gaming",
+      "NFTs"
+    ],
+    "summary": "Mobile crypto gaming company",
+    "logoUrl": "/portfolio-logos/limit-break.avif",
+    "quick": {
+      "blurb": "Mobile crypto gaming company",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Gaming",
+        "NFTs"
+      ]
+    }
+  },
+  {
+    "slug": "lootrush",
+    "name": "Lootrush",
+    "featured": false,
+    "category": "Gaming",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "NFTs",
+      "Gaming"
+    ],
+    "summary": "Gaming NFT marketplace",
+    "logoUrl": "/portfolio-logos/lootrush.avif",
+    "quick": {
+      "blurb": "Gaming NFT marketplace",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "NFTs",
+        "Gaming"
+      ]
+    }
+  },
+  {
+    "slug": "mad-realities",
+    "name": "Mad Realities",
+    "featured": false,
+    "category": "NFT / Media",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Media"
+    ],
+    "summary": "Decentralized entertainment network",
+    "logoUrl": "/portfolio-logos/mad-realities.avif",
+    "quick": {
+      "blurb": "Decentralized entertainment network",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Media"
+      ]
+    }
+  },
+  {
+    "slug": "magic-eden",
+    "name": "Magic Eden",
+    "featured": false,
+    "category": "NFT / Media",
+    "chains": [
+      "Solana",
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "NFTs"
+    ],
+    "summary": "NFT marketplace",
+    "logoUrl": "/portfolio-logos/magic-eden.avif",
+    "quick": {
+      "blurb": "NFT marketplace",
+      "helped": [],
+      "uses": [
+        "Solana",
+        "EVM",
+        "NFTs"
+      ]
+    }
+  },
+  {
+    "slug": "maker",
+    "name": "Maker (MKR)",
+    "featured": false,
+    "category": "DeFi: Stablecoin",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Stablecoins"
+    ],
+    "summary": "Stablecoin protocol",
+    "logoUrl": "/portfolio-logos/maker.avif",
+    "quick": {
+      "blurb": "Stablecoin protocol",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Stablecoins"
+      ]
+    }
+  },
+  {
+    "slug": "matrixport",
+    "name": "Matrixport",
+    "featured": false,
+    "category": "Payments / Treasury",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Crypto financial services platform",
+    "logoUrl": "/portfolio-logos/matrixport.avif",
+    "quick": {
+      "blurb": "Crypto financial services platform",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "metadao",
+    "name": "MetaDAO",
+    "featured": false,
+    "category": "Prediction / Decision Markets",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Governance"
+    ],
+    "summary": "Markets for decision-making",
+    "logoUrl": "/portfolio-logos/metadao.avif",
+    "quick": {
+      "blurb": "Markets for decision-making",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Governance"
+      ]
+    }
+  },
+  {
+    "slug": "mesh-connect",
+    "name": "Mesh Connect",
+    "featured": false,
+    "category": "Payments / Treasury",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Payments"
+    ],
+    "summary": "seamless crypto payments",
+    "logoUrl": "/portfolio-logos/mesh-connect.avif",
+    "quick": {
+      "blurb": "seamless crypto payments",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Payments"
+      ]
+    }
+  },
+  {
+    "slug": "monad",
+    "name": "Monad",
+    "featured": false,
+    "category": "L1",
+    "chains": [
+      "Monad"
+    ],
+    "focusTopics": [],
+    "summary": "Parallel EVM blockchain",
+    "logoUrl": "/portfolio-logos/monad.avif",
+    "quick": {
+      "blurb": "Parallel EVM blockchain",
+      "helped": [],
+      "uses": [
+        "Monad"
+      ]
+    }
+  },
+  {
+    "slug": "moonpay",
+    "name": "Moonpay",
+    "featured": false,
+    "category": "Payments / Treasury",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "Payments"
+    ],
+    "summary": "Crypto payments infrastructure",
+    "logoUrl": "/portfolio-logos/moonpay.avif",
+    "quick": {
+      "blurb": "Crypto payments infrastructure",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "Payments"
+      ]
+    }
+  },
+  {
+    "slug": "noble",
+    "name": "Noble",
+    "featured": false,
+    "category": "DeFi: Stablecoin",
+    "chains": [
+      "Cosmos"
+    ],
+    "focusTopics": [
+      "Stablecoins"
+    ],
+    "summary": "Stablecoin issuance protocol",
+    "logoUrl": "/portfolio-logos/noble.avif",
+    "quick": {
+      "blurb": "Stablecoin issuance protocol",
+      "helped": [],
+      "uses": [
+        "Cosmos",
+        "Stablecoins"
+      ]
+    }
+  },
+  {
+    "slug": "nous-research",
+    "name": "Nous Research",
+    "featured": false,
+    "category": "AI / ML",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [
+      "AI Agents",
+      "Research / Education"
+    ],
+    "summary": "Decentralized AI training",
+    "logoUrl": "/portfolio-logos/nous-research.avif",
+    "quick": {
+      "blurb": "Decentralized AI training",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A",
+        "AI Agents",
+        "Research / Education"
+      ]
+    }
+  },
+  {
+    "slug": "olabs",
+    "name": "O(1) Labs",
+    "featured": false,
+    "category": "Privacy / ZK",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [
+      "ZK"
+    ],
+    "summary": "Crypto computing system",
+    "logoUrl": "/portfolio-logos/olabs.avif",
+    "quick": {
+      "blurb": "Crypto computing system",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A",
+        "ZK"
+      ]
+    }
+  },
+  {
+    "slug": "opensea",
+    "name": "OpenSea",
+    "featured": false,
+    "category": "NFT / Media",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "NFTs"
+    ],
+    "summary": "NFT marketplace",
+    "logoUrl": "/portfolio-logos/opensea.avif",
+    "quick": {
+      "blurb": "NFT marketplace",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "NFTs"
+      ]
+    }
+  },
+  {
+    "slug": "opyn",
+    "name": "Opyn",
+    "featured": false,
+    "category": "DeFi: Derivatives",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Options"
+    ],
+    "summary": "DeFi options protocol",
+    "logoUrl": "/portfolio-logos/opyn.avif",
+    "quick": {
+      "blurb": "DeFi options protocol",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Options"
+      ]
+    }
+  },
+  {
+    "slug": "osmosis",
+    "name": "Osmosis",
+    "featured": false,
+    "category": "DeFi: DEX",
+    "chains": [
+      "Cosmos"
+    ],
+    "focusTopics": [],
+    "summary": "Cross-chain AMM protocol",
+    "logoUrl": "/portfolio-logos/osmosis.avif",
+    "quick": {
+      "blurb": "Cross-chain AMM protocol",
+      "helped": [],
+      "uses": [
+        "Cosmos"
+      ]
+    }
+  },
+  {
+    "slug": "parallel",
+    "name": "Parallel",
+    "featured": false,
+    "category": "Gaming",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Gaming",
+      "NFTs"
+    ],
+    "summary": "Sci-fi NFT card game",
+    "logoUrl": "/portfolio-logos/parallel.avif",
+    "quick": {
+      "blurb": "Sci-fi NFT card game",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Gaming",
+        "NFTs"
+      ]
+    }
+  },
+  {
+    "slug": "rain",
+    "name": "Rain",
+    "featured": false,
+    "category": "CEX / Brokerage",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "Crypto exchange in EMEA",
+    "logoUrl": "/portfolio-logos/rain.avif",
+    "quick": {
+      "blurb": "Crypto exchange in EMEA",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "reflexer-labs",
+    "name": "Reflexer Labs",
+    "featured": false,
+    "category": "DeFi: Stablecoin",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Stablecoins"
+    ],
+    "summary": "Stablecoin protocol",
+    "logoUrl": "/portfolio-logos/reflexer-labs.avif",
+    "quick": {
+      "blurb": "Stablecoin protocol",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Stablecoins"
+      ]
+    }
+  },
+  {
+    "slug": "ribbon-finance",
+    "name": "Ribbon Finance",
+    "featured": false,
+    "category": "DeFi: Derivatives",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Options"
+    ],
+    "summary": "Decentralized structured products",
+    "logoUrl": "/portfolio-logos/ribbon-finance.avif",
+    "quick": {
+      "blurb": "Decentralized structured products",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Options"
+      ]
+    }
+  },
+  {
+    "slug": "royal",
+    "name": "Royal",
+    "featured": false,
+    "category": "NFT / Media",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "NFTs"
+    ],
+    "summary": "Music investment platform",
+    "logoUrl": "/portfolio-logos/royal.avif",
+    "quick": {
+      "blurb": "Music investment platform",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "NFTs"
+      ]
+    }
+  },
+  {
+    "slug": "shadow",
+    "name": "Shadow",
+    "featured": false,
+    "category": "Data / Indexing",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [],
+    "summary": "End-to-end data infrastructure",
+    "logoUrl": "/portfolio-logos/shadow.avif",
+    "quick": {
+      "blurb": "End-to-end data infrastructure",
+      "helped": [],
+      "uses": [
+        "Multi-chain"
+      ]
+    }
+  },
+  {
+    "slug": "sky-mavis",
+    "name": "Sky Mavis",
+    "featured": false,
+    "category": "Gaming",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Gaming",
+      "NFTs"
+    ],
+    "summary": "Play-to-earn gaming",
+    "logoUrl": "/portfolio-logos/sky-mavis.avif",
+    "quick": {
+      "blurb": "Play-to-earn gaming",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Gaming",
+        "NFTs"
+      ]
+    }
+  },
+  {
+    "slug": "sorella-labs",
+    "name": "Sorella Labs",
+    "featured": false,
+    "category": "MEV / Market Mechanisms",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "MEV"
+    ],
+    "summary": "Sustainable onchain markets mitigating MEV",
+    "logoUrl": "/portfolio-logos/sorella-labs.avif",
+    "quick": {
+      "blurb": "Sustainable onchain markets mitigating MEV",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "MEV"
+      ]
+    }
+  },
+  {
+    "slug": "spacemesh",
+    "name": "Spacemesh",
+    "featured": false,
+    "category": "L1",
+    "chains": [
+      "Spacemesh"
+    ],
+    "focusTopics": [],
+    "summary": "Blockmesh operating system",
+    "logoUrl": "/portfolio-logos/spacemesh.avif",
+    "quick": {
+      "blurb": "Blockmesh operating system",
+      "helped": [],
+      "uses": [
+        "Spacemesh"
+      ]
+    }
+  },
+  {
+    "slug": "starkware",
+    "name": "Starkware",
+    "featured": false,
+    "category": "L2 / Scaling",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "ZK",
+      "Rollups"
+    ],
+    "summary": "ZK-based Layer 2 blockchain",
+    "logoUrl": "/portfolio-logos/starkware.avif",
+    "quick": {
+      "blurb": "ZK-based Layer 2 blockchain",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "ZK",
+        "Rollups"
+      ]
+    }
+  },
+  {
+    "slug": "succinct",
+    "name": "Succinct",
+    "featured": false,
+    "category": "Privacy / ZK",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "ZK"
+    ],
+    "summary": "Zero-knowledge infrastructure",
+    "logoUrl": "/portfolio-logos/succinct.avif",
+    "quick": {
+      "blurb": "Zero-knowledge infrastructure",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "ZK"
+      ]
+    }
+  },
+  {
+    "slug": "symbiotic",
+    "name": "Symbiotic",
+    "featured": false,
+    "category": "Staking / Restaking",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Restaking / Shared Security"
+    ],
+    "summary": "Shared security protocol & marketplace",
+    "logoUrl": "/portfolio-logos/symbiotic.avif",
+    "quick": {
+      "blurb": "Shared security protocol & marketplace",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Restaking / Shared Security"
+      ]
+    }
+  },
+  {
+    "slug": "synthetix",
+    "name": "Synthetix (SNX)",
+    "featured": false,
+    "category": "DeFi: Derivatives",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [],
+    "summary": "Synthetic derivatives protocol",
+    "logoUrl": "/portfolio-logos/synthetix.avif",
+    "quick": {
+      "blurb": "Synthetic derivatives protocol",
+      "helped": [],
+      "uses": [
+        "EVM"
+      ]
+    }
+  },
+  {
+    "slug": "taxbit",
+    "name": "TaxBit",
+    "featured": false,
+    "category": "Tax / Compliance",
+    "chains": [
+      "Protocol-agnostic / N/A"
+    ],
+    "focusTopics": [
+      "Compliance / Tax"
+    ],
+    "summary": "Tax & accounting software",
+    "logoUrl": "/portfolio-logos/taxbit.avif",
+    "quick": {
+      "blurb": "Tax & accounting software",
+      "helped": [],
+      "uses": [
+        "Protocol-agnostic / N/A",
+        "Compliance / Tax"
+      ]
+    }
+  },
+  {
+    "slug": "utopia-labs",
+    "name": "Utopia Labs",
+    "featured": false,
+    "category": "Payments / Treasury",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Payments"
+    ],
+    "summary": "Crypto payments & treasury management",
+    "logoUrl": "/portfolio-logos/utopia-labs.avif",
+    "quick": {
+      "blurb": "Crypto payments & treasury management",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Payments"
+      ]
+    }
+  },
+  {
+    "slug": "vana",
+    "name": "Vana",
+    "featured": false,
+    "category": "Data / Indexing",
+    "chains": [
+      "Multi-chain"
+    ],
+    "focusTopics": [
+      "Data Ownership"
+    ],
+    "summary": "Network for user-owned data",
+    "logoUrl": "/portfolio-logos/vana.avif",
+    "quick": {
+      "blurb": "Network for user-owned data",
+      "helped": [],
+      "uses": [
+        "Multi-chain",
+        "Data Ownership"
+      ]
+    }
+  },
+  {
+    "slug": "wildcard",
+    "name": "Wildcard",
+    "featured": false,
+    "category": "Gaming",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "Gaming"
+    ],
+    "summary": "Web3 game",
+    "logoUrl": "/portfolio-logos/wildcard.avif",
+    "quick": {
+      "blurb": "Web3 game",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "Gaming"
+      ]
+    }
+  },
+  {
+    "slug": "yield",
+    "name": "Yield",
+    "featured": false,
+    "category": "DeFi: Lending",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [],
+    "summary": "Decentralized fixed-rate borrowing & lending protocol",
+    "logoUrl": "/portfolio-logos/yield.avif",
+    "quick": {
+      "blurb": "Decentralized fixed-rate borrowing & lending protocol",
+      "helped": [],
+      "uses": [
+        "EVM"
+      ]
+    }
+  },
+  {
+    "slug": "zora",
+    "name": "Zora",
+    "featured": false,
+    "category": "NFT / Media",
+    "chains": [
+      "Ethereum / EVM"
+    ],
+    "focusTopics": [
+      "NFTs"
+    ],
+    "summary": "NFT-based social platform",
+    "logoUrl": "/portfolio-logos/zora.avif",
+    "quick": {
+      "blurb": "NFT-based social platform",
+      "helped": [],
+      "uses": [
+        "EVM",
+        "NFTs"
+      ]
+    }
+  }
+]

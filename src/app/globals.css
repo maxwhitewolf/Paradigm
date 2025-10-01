@@ -1,0 +1,1030 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Martina Plantign", Georgia, serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (min-width: 800px) {
+  html,
+  body {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+/* ===== Team Page Styles ===== */
+/* --- Responsive display helpers (Tailwind-like) --- */
+.md\:hidden { display: block; }
+.md\:block  { display: block; }
+
+@media (min-width: 768px) {
+  .md\:hidden { display: none !important; }
+  .md\:block  { display: block !important; }
+}
+
+/* --- Positioning & layout --- */
+.sticky { position: sticky; }
+.top-6 { top: 60px; }
+.z-10 { z-index: 100; }
+
+.block { display: block; }
+.w-full { width: 100%; }
+.relative { position: relative; }
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+
+.grid { display: grid; }
+.grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.grid-cols-2  { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* gaps */
+.gap-1 { gap: 10px; }
+.gap-2 { gap: 20px; }
+.gap-\[16px\] { gap: 16px; }
+.gap-half { gap: 5px; }
+
+.gap-x-2 { column-gap: 20px; }
+.gap-y-4 { row-gap: 40px; }
+
+/* --- Spacing --- */
+.p-\[16px\] { padding: 16px; }
+.p-2 { padding: 20px; }
+.pt-0 { padding-top: 0; }
+
+/* --- Borders & background --- */
+.border { border-width: 1px; }
+.border-solid { border-style: solid; }
+.border-gray { --tw-border-opacity: 1; border-color: rgb(235 235 235 / var(--tw-border-opacity)); }
+
+.bg-white { --tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity)); }
+
+/* --- Typography --- */
+.uppercase { text-transform: uppercase; }
+.font-medium { font-weight: 500; }
+
+.font-mono { font-family: Atlas Typewriter, monospace; }
+.text-mono-12 { font-size: 12px; line-height: 16px; }
+
+/* --- Sizing helpers --- */
+.w-\[12px\] { width: 12px; }
+.h-\[6px\]  { height: 6px; }
+
+.aspect-square { aspect-ratio: 1 / 1; }
+
+/* --- Interaction helpers --- */
+.pointer-events-none { pointer-events: none; }
+.pointer-events-auto { pointer-events: auto; }
+.select-none { user-select: none; }
+.overflow-hidden { overflow: hidden; }
+
+/* --- Images inside .image container fill & cover --- */
+.image { position: relative; }
+.image img,
+.image picture,
+.image video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- Link styles --- */
+/* bullet/"push" bar to the left; animate on hover */
+.link-tag-push { position: relative; padding-left: 24px; }
+.link-tag-push::before {
+  content: "";
+  width: 12px; height: 12px;
+  margin-right: 12px;
+  background: currentColor;
+  display: inline-block;
+  position: absolute;
+  left: 0; top: 2px;
+  transform-origin: top left;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(.86,0,.07,1);
+}
+.link-tag-push:hover::before,
+.link-tag-push:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* --- Mobile dropdown specifics --- */
+.dropdown { background: #fff; }
+.dropdown-panel {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition:
+    max-height .35s cubic-bezier(.4,0,.2,1),
+    opacity .2s linear;
+}
+.is-open .dropdown-panel {
+  max-height: 480px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* rotate a chevron/arrow when open */
+.dropdown-arrow { transition: transform .25s ease; }
+.is-open .dropdown-arrow { transform: rotate(180deg); }
+
+/* ===== Team Member Page Styles ===== */
+/* --- Container & vertical rhythm --- */
+.px-container-mobile { padding-left: 16px; padding-right: 16px; }
+.my-8 { margin-top: 80px; margin-bottom: 80px; }
+
+@media (min-width: 768px) {
+  .md\:px-container-desktop { padding-left: 40px; padding-right: 40px; }
+  .md\:my-12 { margin-top: 120px; margin-bottom: 120px; }
+}
+@media (min-width: 1024px) {
+  .lg\:my-18 { margin-top: 180px; margin-bottom: 180px; }
+}
+
+/* --- Grid shell --- */
+.grid { display: grid; }
+.grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.gap-y-3 { row-gap: 30px; }
+.gap-x-3 { column-gap: 30px; }
+.min-h-\[280px\] { min-height: 280px; }
+
+.col-span-6 { grid-column: span 6 / span 6; }
+@media (min-width: 768px) {
+  .md\:col-span-3 { grid-column: span 3 / span 3; }  /* 2-up on md (6/3) */
+}
+@media (min-width: 1280px) {
+  .xl\:col-span-2 { grid-column: span 2 / span 2; }  /* 3-up on xl (6/2) */
+}
+
+/* --- Sticky filter bar (sits under site header) --- */
+.team-filters {
+  position: sticky;
+  top: 120px; /* matches .top-12 you're using */
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.py-1 { padding-top: 10px; padding-bottom: 10px; }
+
+/* Tag buttons (uses your button reset) */
+.button.button-tag {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
+  font-family: Atlas Typewriter, monospace;
+  height: 20px; line-height: 20px;
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 0 6px;
+  color: #000;
+}
+.button.button-tag:hover,
+.button.button-tag.active { color: #000; }
+
+/* --- Team card --- */
+.team-card {
+  display: flex; flex-direction: column; gap: 10px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.team-card:focus-visible {
+  outline: 2px solid #000; outline-offset: 3px;
+}
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,.06);
+}
+
+/* Photo (square, cover, subtle inset border) */
+.team-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.team-photo img,
+.team-photo picture,
+.team-photo video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+}
+.team-photo::after {
+  content: "";
+  position: absolute; inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
+  pointer-events: none;
+}
+
+/* --- Text styles --- */
+.text-mono-13 { font-size: 13px; line-height: 17px; }
+.text-serif-14 { font-size: 14px; line-height: 19px; }
+.text-mono-24 { font-size: 24px; line-height: 30px; }
+
+.font-mono { font-family: Atlas Typewriter, monospace; }
+.uppercase { text-transform: uppercase; }
+.font-medium { font-weight: 500; }
+.opacity-50 { opacity: .5; }
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* --- Links & subtle underline on hover --- */
+.link-underline-hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color .2s ease;
+}
+.link-underline-hover:hover,
+.link-underline-hover:focus-visible { text-decoration-color: currentColor; }
+
+/* --- Little helpers used on the page --- */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 10px; }
+.gap-2 { gap: 20px; }
+.gap-3 { gap: 30px; }
+.gap-half { gap: 5px; }
+.w-full { width: 100%; }
+.block { display: block; }
+.cursor-pointer { cursor: pointer; }
+.aspect-\[16\/9\] { aspect-ratio: 16 / 9; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Optional chevron rotate for "more/less" UI */
+.rotate-180 { transform: rotate(180deg); }
+.rotate-\[135deg\] { transform: rotate(135deg); }
+
+/* "By " prefix helper if you show author for posts in the feed */
+.before\:content-\[\'By_\'\]::before { content: "By "; }
+
+/* Make sure anchors look like your site */
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+a, a * { cursor: pointer; }
+
+button,
+.button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* ===== Custom Layout Helpers ===== */
+.min-h-hero {
+  min-height: 100vh;
+}
+
+.min-h-svh {
+  min-height: 100svh;
+}
+
+/* ===== Custom Homepage Styles ===== */
+.text-serif-14 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-serif-18 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.rounded-6 {
+  border-radius: 6px;
+}
+
+.homepage-tag-description {
+  color: #374151;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ===== Custom Button Styles ===== */
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.button-tag {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+}
+
+.button-tag:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.bg-gray-important {
+  background-color: #f3f4f6 !important;
+}
+
+.link-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.link-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.link-cover:hover::before {
+  left: 100%;
+}
+
+/* ===== Spiral Animation ===== */
+.icon-spiral--animated {
+  animation: spiral-rotate 20s linear infinite;
+}
+
+.icon-spiral-container--dark,
+.icon-spiral-container--med,
+.icon-spiral-container--light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-spiral-bg--dark,
+.icon-spiral-bg--med,
+.icon-spiral-bg--light {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-spiral-bg--dark {
+  background-color: #000;
+}
+
+.icon-spiral-bg--med {
+  background-color: #333;
+}
+
+.icon-spiral-bg--light {
+  background-color: #666;
+}
+
+.icon-spiral-bg--dark--animated {
+  animation: spiral-pulse 3s ease-in-out infinite;
+}
+
+.icon-spiral-bg--med--animated {
+  animation: spiral-pulse 3s ease-in-out infinite 1s;
+}
+
+.icon-spiral-bg--light--animated {
+  animation: spiral-pulse 3s ease-in-out infinite 2s;
+}
+
+@keyframes spiral-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spiral-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* ===== Footer Styles ===== */
+.text-green {
+  color: rgb(0, 225, 0);
+}
+
+.link-underline-hover {
+  position: relative;
+  text-decoration: none;
+  display: inline-block; /* prevent underline extending full line */
+}
+
+.link-underline-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.link-underline-hover:hover::after {
+  transform: scaleX(1);
+}
+
+.tag {
+  background: currentColor;
+  width: 12px;
+  height: 12px;
+}
+
+/* ===== About Page Styles ===== */
+/* === Container spacing === */
+.px-container-mobile {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.my-8 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 800px) {
+  .md\:px-container-desktop {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .md\:mt-12 {
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .lg\:mt-18 {
+    margin-top: 180px;
+  }
+}
+
+/* === Grid === */
+.grid {
+  display: grid;
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.gap-y-3 {
+  row-gap: 30px;
+}
+
+/* === Column spans / positioning === */
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+
+@media (min-width: 800px) {
+  .md\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+  .md\:col-start-5 {
+    grid-column-start: 5;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl\:col-start-4 {
+    grid-column-start: 4;
+  }
+  .xl\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+}
+
+.max-w-\[1000px\] {
+  max-width: 1000px;
+}
+
+/* === Flex + gaps === */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.gap-3 {
+  gap: 30px;
+}
+@media (min-width: 1800px) {
+  .\33xl\:gap-6 { /* "3xl:gap-6" */
+    gap: 60px;
+  }
+}
+
+/* === Typography === */
+.text-serif-32 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+@media (min-width: 800px) {
+  .md\:text-serif-40 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .\33xl\:text-serif-64 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+}
+
+.text-serif-18 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (min-width: 1800px) {
+  .\33xl\:text-serif-24 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+/* === Rich text spacing === */
+.line-break ol,
+.line-break p,
+.line-break ul {
+  margin-bottom: 19px;
+}
+@media (min-width: 800px) {
+  .line-break ol,
+  .line-break p,
+  .line-break ul {
+    margin-bottom: 16px;
+  }
+}
+
+/* ===== Team Page CSS ===== */
+/* --- Responsive display helpers (Tailwind-like) --- */
+.md\:hidden {
+  display: block; /* default on mobile */
+}
+.md\:block {
+  display: block;
+}
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none !important; /* hide at ≥ md */
+  }
+  .md\:block {
+    display: block !important; /* show at ≥ md */
+  }
+}
+
+/* --- Positioning & layout --- */
+.sticky {
+  position: sticky;
+}
+.top-6 {
+  top: 60px;
+}
+.z-10 {
+  z-index: 100;
+}
+.block {
+  display: block;
+}
+.w-full {
+  width: 100%;
+}
+.relative {
+  position: relative;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.grid {
+  display: grid;
+}
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* gaps (match the values you shared) */
+.gap-1 {
+  gap: 10px;
+}
+.gap-2 {
+  gap: 20px;
+}
+.gap-\[16px\] {
+  gap: 16px;
+}
+.gap-half {
+  gap: 5px;
+}
+.gap-x-2 {
+  column-gap: 20px;
+}
+.gap-y-4 {
+  row-gap: 40px;
+}
+
+/* --- Spacing --- */
+.p-\[16px\] {
+  padding: 16px;
+}
+.p-2 {
+  padding: 20px;
+}
+.pt-0 {
+  padding-top: 0;
+}
+
+/* --- Borders & background --- */
+.border {
+  border-width: 1px;
+}
+.border-solid {
+  border-style: solid;
+}
+.border-gray {
+  --tw-border-opacity: 1;
+  border-color: rgb(235 235 235 / var(--tw-border-opacity));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+/* --- Typography --- */
+.uppercase {
+  text-transform: uppercase;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-mono {
+  font-family: Atlas Typewriter, monospace;
+}
+.text-mono-12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* --- Sizing helpers --- */
+.w-\[12px\] {
+  width: 12px;
+}
+.h-\[6px\] {
+  height: 6px;
+}
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* --- Interaction helpers --- */
+.pointer-events-none {
+  pointer-events: none;
+}
+.pointer-events-auto {
+  pointer-events: auto;
+}
+.select-none {
+  user-select: none;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* --- Images inside .image container fill & cover --- */
+.image {
+  position: relative;
+}
+.image img,
+.image picture,
+.image video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- Link styles --- */
+/* bullet/"push" bar to the left; animate on hover */
+.link-tag-push {
+  position: relative;
+  padding-left: 24px;
+}
+.link-tag-push::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  background: currentColor;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  transform-origin: top left;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(.86,0,.07,1);
+}
+.link-tag-push:hover::before,
+.link-tag-push:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* --- Mobile dropdown specifics (toggle .is-open on the wrapper) --- */
+/* structure: <div class="md:hidden sticky top-6 p-[16px] z-10 bg-white">
+  <div class="border border-solid border-gray dropdown">
+    <button>...</button>
+    <div class="dropdown-panel">...</div>
+  </div>
+</div> */
+.dropdown {
+  background: #fff;
+}
+.dropdown-panel {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition: max-height .35s cubic-bezier(.4,0,.2,1), opacity .2s linear;
+}
+.is-open .dropdown-panel {
+  max-height: 480px; /* adjust if list runs longer */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* optional: rotate a chevron/arrow inside the button when open */
+.dropdown-arrow {
+  transition: transform .25s ease;
+}
+.is-open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* --- Team Member Grid CSS --- */
+/* Container & vertical rhythm */
+.px-container-mobile {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.my-8 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .md\:px-container-desktop {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .md\:my-12 {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:my-18 {
+    margin-top: 180px;
+    margin-bottom: 180px;
+  }
+}
+
+/* Grid shell */
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.gap-y-3 {
+  row-gap: 30px;
+}
+.gap-x-3 {
+  column-gap: 30px;
+}
+.min-h-\[280px\] {
+  min-height: 280px;
+}
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+@media (min-width: 768px) {
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3; /* 2-up on md (6/3) */
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:col-span-2 {
+    grid-column: span 2 / span 2; /* 3-up on xl (6/2) */
+  }
+}
+
+/* Sticky filter bar (sits under site header) */
+.team-filters {
+  position: sticky;
+  top: 120px; /* matches .top-12 you're using */
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.py-1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Tag buttons (uses your button reset) */
+.button.button-tag {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
+  font-family: Atlas Typewriter, monospace;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 0 6px;
+  color: #000;
+}
+.button.button-tag:hover,
+.button.button-tag.active {
+  color: #000;
+}
+
+/* Team card */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.team-card:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+}
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,.06);
+}
+
+/* Photo (square, cover, subtle inset border) */
+.team-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.team-photo img,
+.team-photo picture,
+.team-photo video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.team-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
+  pointer-events: none;
+}
+
+/* Text styles */
+.text-mono-13 {
+  font-size: 13px;
+  line-height: 17px;
+}
+.text-serif-14 {
+  font-size: 14px;
+  line-height: 19px;
+}
+.text-mono-24 {
+  font-size: 24px;
+  line-height: 30px;
+}
+.opacity-50 {
+  opacity: .5;
+}
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Little helpers used on the page */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-start {
+  align-items: flex-start;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.aspect-\[16\/9\] {
+  aspect-ratio: 16 / 9;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional chevron rotate for "more/less" UI */
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.rotate-\[135deg\] {
+  transform: rotate(135deg);
+}
+
+/* "By " prefix helper if you show author for posts in the feed */
+.before\:content-\[\'By_\'\]::before {
+  content: "By ";
+}
+
+/* Make sure anchors look like your site */
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a, a * {
+  cursor: pointer;
+}
