@@ -181,33 +181,34 @@ export default function Writing() {
         <div className="my-10 md:my-12 lg:first:mt-18 lg:last:mb-18">
           <div className="px-container-mobile md:px-container-desktop">
 
-            {/* md+ left sticky filters */}
-            <div className="hidden md:block pointer-events-none absolute inset-0 px-container-desktop w-fit">
-              <div className="sticky top-12 lg:top-18 flex flex-col gap-2 justify-between items-start z-10 pointer-events-auto">
-                <div className="font-mono text-mono-12 flex flex-col gap-1">
-                  <p className="uppercase font-medium">Writing</p>
-                  <ul className="flex flex-col gap-1">
-                    {categories.map((category) => (
-                      <li key={category}>
-                        <button 
-                          className={`block link-tag-push font-mono text-mono-12 text-left ${activeCategory === category ? 'active' : ''}`}
-                          onClick={() => setActiveCategory(category)}
-                        >
-                          <span>{category}</span>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
+            {/* In-flow grid: left sidebar below navbar, content to the right */}
+            <div className="grid grid-cols-12 gap-y-3 gap-x-3">
+              {/* Sidebar */}
+              <aside className="hidden md:block col-span-3 md:pr-4">
+                <div className="sticky top-12 lg:top-18 pointer-events-auto">
+                  <div className="font-mono text-mono-12 flex flex-col gap-1">
+                    <p className="uppercase font-medium">Writing</p>
+                    <ul className="flex flex-col gap-1">
+                      {categories.map((category) => (
+                        <li key={category}>
+                          <button 
+                            className={`block link-tag-push font-mono text-mono-12 text-left ${activeCategory === category ? 'active' : ''}`}
+                            onClick={() => setActiveCategory(category)}
+                          >
+                            <span>{category}</span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </aside>
 
-            {/* main grid */}
-            <div className="grid grid-cols-12">
-              <div className="col-span-12 md:col-span-7 md:col-start-5 xl:col-start-4 xl:col-span-6 max-w-[1000px]">
+              {/* Content */}
+              <div className="col-span-12 md:col-span-9 max-w-[1000px]">
 
                 {/* FEATURED */}
-                <section className="flex flex-col pb-6 md:pb-5 grid-container-reset-mobile px-container-mobile gap-2 border-b border-solid md:border-none border-gray-border">
+                <section className="flex flex-col pb-6 md:pb-5 grid-container-reset-mobile px-container-mobile md:px-0 gap-2 border-b border-solid md:border-none border-gray-border">
                   <p className="font-mono text-mono-12 font-medium">FEATURED</p>
 
                   <div className="grid md:grid-cols-1 gap-x-3 lg:gap-x-6 3xl:gap-x-10 gap-y-4 md:gap-y-5">
@@ -218,34 +219,10 @@ export default function Writing() {
                 </section>
 
                 {/* ALL WRITING */}
-                <section className="flex flex-col py-4 grid-container-reset-mobile px-container-mobile md:mx-0 md:px-0 gap-2">
+                <section className="flex flex-col py-4 grid-container-reset-mobile px-container-mobile md:px-0 gap-2">
                   <p className="font-mono text-mono-12 font-medium">ALL WRITING</p>
 
-                  {/* mobile categories (sticky) */}
-                  <div className="md:hidden col-span-12 lg:col-span-10 lg:col-start-2 xl:col-span-2 xl:col-start-11 xl:row-start-2 xl:border-b-0 xl:pb-0">
-                    <div className="sticky top-10">
-                      <div className="flex flex-col gap-2 md:gap-4">
-                        <div className="grid grid-cols-2 xl:grid-cols-1 gap-y-1">
-                          <div className="col-span-2 xl:col-span-1">
-                            <p className="font-mono text-mono-12 uppercase font-medium">Categories</p>
-                          </div>
-                          <button className="block link-tag-push font-mono text-mono-12 text-left">
-                            <span>All</span>
-                          </button>
-                          {categories.map((category) => (
-                            <div key={category}>
-                              <button 
-                                className={`block link-tag-push font-mono text-mono-12 text-left ${activeCategory === category ? 'active' : ''}`}
-                                onClick={() => setActiveCategory(category)}
-                              >
-                                <span>{category}</span>
-                              </button>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* mobile categories removed per request; desktop filters only */}
 
                   {/* search */}
                   <form>

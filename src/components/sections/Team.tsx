@@ -181,7 +181,6 @@ function slugify(s: string) {
 export default function Team() {
   const [cat, setCat] = useState("All");
   const [subcat, setSubcat] = useState(""); // only used when cat has subcats
-  const [mobileOpen, setMobileOpen] = useState(false);
 
   const visible = useMemo(() => {
     let list = TEAM;
@@ -213,89 +212,14 @@ export default function Team() {
   return (
     <div className="relative min-h-svh">
       <div>
-        {/* Mobile filter (md:hidden) */}
+        {/* Mobile filter removed per request; keeping desktop filters only */}
         <div className="relative min-h-svh">
-          <div className="md:hidden sticky top-6 p-[16px] z-10 bg-white">
-            <div className={`border border-solid border-gray rounded-lg overflow-hidden dropdown ${mobileOpen ? "is-open" : ""}`}>
-              <button
-                className="block w-full font-mono text-mono-12"
-                onClick={() => setMobileOpen((v) => !v)}
-                aria-expanded={mobileOpen}
-                aria-controls="team-mobile-filter"
-                type="button"
-              >
-                <div className="flex justify-between items-center p-2">
-                  <div className="flex gap-[16px]">
-                    <div className="uppercase font-medium">Team</div>
-                    <div className="opacity-60">{cat}</div>
-                    {subcat && <div className="opacity-60">• {subcat}</div>}
-                  </div>
-                  <svg
-                    className={`w-[12px] h-[6px] dropdown-arrow`}
-                    viewBox="0 0 12 6"
-                    aria-hidden
-                  >
-                    <path d="M0 3L5 5.88675V0.113248L0 3ZM12 2.5H4.5v1H12v-1Z" fill="currentColor" />
-                  </svg>
-                </div>
-              </button>
-
-              <div id="team-mobile-filter" className="dropdown-panel">
-                <div className="p-2 pt-0">
-                  <ul className="flex flex-col gap-2 font-mono text-mono-12">
-                    <li>
-                      <CatButton label="All" onClick={() => { setCat("All"); setSubcat(""); setMobileOpen(false); }} />
-                    </li>
-                    <li>
-                      <CatButton
-                        label="Leadership"
-                        onClick={() => { setCat("Leadership"); setSubcat(""); setMobileOpen(false); }}
-                      />
-                    </li>
-                    <li>
-                      <CatButton
-                        label="Investing & Research"
-                        onClick={() => { setCat("Investing & Research"); setSubcat(""); setMobileOpen(false); }}
-                      />
-                    </li>
-                    <li>
-                      <div className="flex flex-col gap-2">
-                        <CatButton
-                          label="Portfolio & Firm Operations"
-                          onClick={() => { setCat("Portfolio & Firm Operations"); setSubcat(""); }}
-                        />
-                        <ul className="ml-2 flex flex-col gap-2 pt-2">
-                          {SUBCATS["Portfolio & Firm Operations"].map((s) => (
-                            <li key={s}>
-                              <SubButton label={s} onClick={() => { setSubcat(s); setMobileOpen(false); }} />
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <CatButton
-                        label="Collaborators"
-                        onClick={() => { setCat("Collaborators"); setSubcat(""); setMobileOpen(false); }}
-                      />
-                    </li>
-                    <li>
-                      <CatButton
-                        label="Policy Council"
-                        onClick={() => { setCat("Policy Council"); setSubcat(""); setMobileOpen(false); }}
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Main content with in-grid desktop sidebar (non-overlapping) */}
           <div className="px-container-mobile md:px-container-desktop my-8 md:my-12 lg:my-18">
             <div className="grid grid-cols-12 gap-y-3 gap-x-3">
               {/* Desktop sidebar */}
-              <aside className={`hidden ${mobileOpen ? "md:hidden" : "md:block"} col-span-3 md:pr-4`}>
+              <aside className={`hidden md:block col-span-3 md:pr-4`}>
                 <div className="sticky top-12 lg:top-18 pointer-events-auto">
                   <div className="font-mono text-mono-12 flex flex-col gap-1">
                     <p className="uppercase font-medium">Team</p>
@@ -303,7 +227,7 @@ export default function Team() {
                       {CATEGORIES.map((c) => (
                         <li key={c}>
                           <button
-                            className="link-tag-push font-mono text-mono-12"
+                            className="link-tag-push font-mono text-mono-12 block w-full text-left leading-tight whitespace-nowrap"
                             onClick={() => { setCat(c); setSubcat(""); }}
                             aria-pressed={cat === c}
                           >
@@ -314,7 +238,7 @@ export default function Team() {
                               {SUBCATS[c].map((s) => (
                                 <li key={s}>
                                   <button
-                                    className="link-tag-push font-mono text-mono-12"
+                                    className="link-tag-push font-mono text-mono-12 block w-full text-left leading-tight whitespace-nowrap"
                                     onClick={() => setSubcat(s)}
                                     aria-pressed={subcat === s}
                                   >

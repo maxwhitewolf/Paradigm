@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Paradigm Website",
+  title: "Paradigm",
   description: "Building the future of open source and venture capital.",
 };
 

@@ -13,8 +13,8 @@ export default function HomePage() {
               <div className="absolute top-4 right-4 w-3 h-3 bg-gray-300 rounded-full group-hover:bg-gray-400 transition-colors"></div>
               
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900 font-mono">About</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="font-mono text-mono-18 uppercase font-bold">About</h3>
+                <p className="font-mono text-mono-12 leading-relaxed">
                   Paradigm is a research-driven crypto investment firm that funds companies
                   and protocols from their earliest stages.
                 </p>
@@ -36,8 +36,8 @@ export default function HomePage() {
               <div className="absolute top-4 right-4 w-3 h-3 bg-gray-300 rounded-full group-hover:bg-gray-400 transition-colors"></div>
               
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900 font-mono">Open Source</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="font-mono text-mono-18 uppercase font-bold">Open Source</h3>
+                <p className="font-mono text-mono-12 leading-relaxed">
                   We build software, much of it open source, that aims to advance the
                   frontier of crypto for everyone.
                 </p>
@@ -100,8 +100,8 @@ export default function HomePage() {
               <div className="absolute top-4 right-4 w-3 h-3 bg-gray-300 rounded-full group-hover:bg-gray-400 transition-colors"></div>
               
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900 font-mono">Collaborate with us</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="font-mono text-mono-18 uppercase font-bold">Collaborate with us</h3>
+                <p className="font-mono text-mono-12 leading-relaxed">
                   We work with builders from day zero, whether you have an idea or want to
                   work on one of ours.
                 </p>

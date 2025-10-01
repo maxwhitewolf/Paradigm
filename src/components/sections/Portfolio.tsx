@@ -897,103 +897,69 @@ export default function Portfolio() {
   return (
     <div className="relative min-h-svh">
       <div>
-        {/* Desktop sticky side nav */}
-        <div className="hidden md:block absolute inset-0 pointer-events-none px-container-desktop z-10">
-          <div className="sticky top-12 lg:top-18 md:max-w-[30%] lg:max-w-[22%] pointer-events-auto">
-            <div className="font-mono text-mono-12 flex flex-col gap-1">
-              <p className="uppercase font-medium">Portfolio</p>
-              <ul className="flex flex-col gap-1">
-                <li>
-                  <a className="link-tag-push pointer-events-auto" href="/portfolio#featured">
-                    <span>Featured</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="link-tag-push pointer-events-auto" href="/portfolio#investments">
-                    <span>Investments</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile dropdown (non-interactive stub; hook up JS if needed) */}
-        <div className="md:hidden sticky top-6 p-[16px] z-10 bg-white">
-          <div className="border border-solid border-gray">
-            <button className="block w-full font-mono text-mono-12">
-              <div className="flex justify-between items-center p-2">
-                <div className="uppercase font-medium">Portfolio</div>
-                <svg className="w-[12px] h-[6px]" viewBox="0 0 12 6" aria-hidden>
-                  <path d="M0 3L5 5.88675V0.113248L0 3ZM12 2.5H4.5v1H12v-1Z" fill="currentColor" />
-                </svg>
-              </div>
-            </button>
-            <div>
-              <div className="overflow-hidden pointer-events-none" style={{ height: 0, opacity: 0 }}>
-                <div>
-                  <div className="p-2 pt-0">
-                    <ul className="flex flex-col gap-2 font-mono text-mono-12">
-                      <li>
-                        <a className="link-underline-hover pointer-events-auto flex" href="/portfolio#featured">
-                          Featured
-                        </a>
-                      </li>
-                      <li>
-                        <a className="link-underline-hover pointer-events-auto flex" href="/portfolio#investments">
-                          Investments
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+        {/* In-flow grid: left sidebar below navbar, content starts to the right */}
+        <div className="px-container-mobile md:px-container-desktop my-10 md:my-12 lg:mt-18">
+          <div className="grid grid-cols-12 gap-y-3 gap-x-3">
+            {/* Sidebar */}
+            <aside className="hidden md:block col-span-3 md:pr-4">
+              <div className="sticky top-12 lg:top-18 pointer-events-auto">
+                <div className="font-mono text-mono-12 flex flex-col gap-1">
+                  <p className="uppercase font-medium">Portfolio</p>
+                  <ul className="flex flex-col gap-1">
+                    <li>
+                      <a className="link-tag-push" href="/portfolio#featured">
+                        <span>Featured</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a className="link-tag-push" href="/portfolio#investments">
+                        <span>Investments</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </aside>
 
-        {/* Featured */}
-        <div id="featured" className="px-container-mobile md:px-container-desktop my-8 md:my-12 lg:mt-18">
-          <div className="grid grid-cols-12">
-            <div className="col-span-12 md:col-span-7 md:col-start-5 xl:col-start-4 max-w-[1000px]">
-              <div className="flex flex-col gap-3 md:gap-4">
-                <div className="flex flex-col gap-1">
-                  <h2 className="font-mono text-mono-12 uppercase font-medium">Featured</h2>
-                  <div className="grid lg:grid-cols-2">
-                    <div className="rich-text line-break font-mono text-mono-12">
-                      <p>
-                        We invest in, build, and contribute to companies and protocols with as little as $1M and as much as
-                        $100M+.
-                      </p>
+            {/* Content */}
+            <div className="col-span-12 md:col-span-9 max-w-[1000px]">
+              {/* Featured */}
+              <section id="featured" className="my-10 md:my-12 lg:mt-0">
+                <div className="flex flex-col gap-3 md:gap-4">
+                  <div className="flex flex-col gap-1">
+                    <h2 className="font-mono text-mono-12 uppercase font-medium">Featured</h2>
+                    <div className="grid lg:grid-cols-2">
+                      <div className="rich-text line-break font-mono text-mono-12">
+                        <p>
+                          We invest in, build, and contribute to companies and protocols with as little as $1M and as much as
+                          $100M+.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="grid gap-x-3 gap-y-4 grid-cols-2 lg:grid-cols-4">
-                  {featured.map((f) => (
-                    <LogoCard key={f.title} {...f} />
-                  ))}
+                  <div className="grid gap-x-3 gap-y-4 grid-cols-2 lg:grid-cols-4">
+                    {featured.map((f) => (
+                      <LogoCard key={f.title} {...f} />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </section>
 
-        {/* Investments */}
-        <div id="investments" className="px-container-mobile md:px-container-desktop my-8 md:my-12 lg:mt-18">
-          <div className="grid grid-cols-12">
-            <div className="col-span-12 md:col-span-7 md:col-start-5 xl:col-start-4 max-w-[1000px]">
-              <div className="flex flex-col gap-3 md:gap-4">
-                <div className="flex flex-col gap-1">
-                  <h2 className="font-mono text-mono-12 uppercase font-medium">Investments</h2>
-                </div>
+              {/* Investments */}
+              <section id="investments" className="my-10 md:my-12 lg:mt-18">
+                <div className="flex flex-col gap-3 md:gap-4">
+                  <div className="flex flex-col gap-1">
+                    <h2 className="font-mono text-mono-12 uppercase font-medium">Investments</h2>
+                  </div>
 
-                <div className="grid gap-x-3 gap-y-4 grid-cols-2 lg:grid-cols-4">
-                  {investments.map((i) => (
-                    <LogoCard key={i.title} {...i} />
-                  ))}
+                  <div className="grid gap-x-3 gap-y-4 grid-cols-2 lg:grid-cols-4">
+                    {investments.map((i) => (
+                      <LogoCard key={i.title} {...i} />
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>

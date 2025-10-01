@@ -1,14 +1,39 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname?.startsWith(href);
+  };
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = previousOverflow || "";
+    }
+    return () => {
+      document.body.style.overflow = previousOverflow || "";
+    };
+  }, [isMenuOpen]);
   return (
     <header>
       {/* Mobile Header */}
-      <div className="lg:hidden fixed z-50 top-0 left-0 right-0 bg-white">
+      <div
+        className={`lg:hidden fixed top-0 left-0 right-0 ${isMenuOpen ? "bg-black text-white" : "bg-white text-black"} border-b border-solid`}
+        style={{ zIndex: 300, borderColor: isMenuOpen ? "rgba(255,255,255,.15)" : "rgba(0,0,0,.12)" }}
+      >
         <div className="px-container-mobile h-header-mobile flex justify-between items-center">
           {/* Logo */}
           <a className="block" href="/">
-            <svg width="180" height="42" viewBox="0 0 140 32" className="block text-black">
+            <svg width="180" height="42" viewBox="0 0 140 32" className={`block ${isMenuOpen ? "text-white" : "text-black"}`}>
               <path d="M28 9.84634L10.7692 0L8.61538 1.23168V3.69267L6.46154 2.46099L4.30769 3.69267V6.15367L2.15385 4.92198L0 6.15367V25.8463L2.15385 27.078L4.30769 25.8463V28.3073L6.46154 29.539L8.61538 28.3073V30.7683L10.7692 32L28 22.1537V19.6927L25.8462 18.461L28 17.2293V14.7683L25.8462 13.5366L28 12.305V9.84634ZM4.30769 23.3853L2.15385 24.617V7.38534L4.30769 8.61702V23.3853ZM10.7692 24.6147V22.1537L19.3846 17.2317L21.5385 18.4634L10.7692 24.6147ZM17.2308 16L10.7692 19.6927V12.3073L17.2308 16ZM19.3846 14.7683L10.7692 9.84634V7.38534L21.5385 13.539L19.3846 14.7683ZM6.46154 4.92198L8.61538 6.15367V8.61466L6.46154 7.38298V4.92198ZM6.46154 9.84634L8.61538 11.078V20.9244L6.46154 22.156V9.84634ZM6.46154 24.6147L8.61538 23.383V25.844L6.46154 27.0756V24.6147ZM25.8462 20.922L10.7692 29.5366V27.0756L23.6923 19.6903L25.8462 20.922ZM25.8462 16L23.6923 17.2317L21.5385 16L23.6923 14.7683L25.8462 16ZM23.6923 12.3073L10.7692 4.92198V2.46099L25.8462 11.0756L23.6923 12.3073Z" fill="#00E100"/>
               <g opacity="1">
                 <path d="M38.9292 22.7264C38.9319 22.9865 39.6678 23.2626 40.7096 23.3938L41.4433 23.4572L41.4562 24.7103L33.9608 24.7879L33.9478 23.5348L34.5146 23.4581C35.5297 23.2821 36.118 23.0159 36.1154 22.7557L35.9733 9.04186C35.9706 8.78174 35.3768 8.52773 34.3584 8.37269L33.7903 8.30766L33.7773 7.05454L40.0195 6.98989C44.5119 6.94336 47.9329 8.46861 47.9691 11.968C48.0035 15.2783 45.0968 17.7441 40.3019 18.2666L40.005 16.9927C42.8857 16.5844 45.0725 15.4032 45.0474 12.9677C45.0201 10.3432 43.2509 8.46975 39.4441 8.50923L38.7822 8.51609L38.9294 22.7266L38.9292 22.7264Z" fill="currentColor"/>
@@ -25,13 +50,88 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="p-2 bg-black flex flex-col items-center text-center border border-solid border-transparent"
+            className={`p-1 bg-black flex flex-col items-center text-center border border-solid ${isMenuOpen ? "border-gray-dark" : "border-transparent"}`}
             aria-label="Mobile Menu"
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen((prev) => !prev)}
           >
-            <div className="tag text-gray-700"></div>
+            <div className={`tag ${isMenuOpen ? "text-green" : "text-gray-dark"}`}></div>
           </button>
         </div>
       </div>
+
+      {/* Mobile Fullscreen Menu (under header) */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 lg:hidden" style={{ zIndex: 200 }}>
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black" />
+
+          {/* Menu content area - placed under the fixed header height */}
+          <nav
+            className="relative px-container-mobile text-white overflow-auto"
+            style={{ paddingTop: 80 }}
+            aria-label="Mobile Navigation"
+          >
+            <ul className="flex flex-col gap-2">
+              <li>
+                <a className="flex items-center gap-2" href="/about" onClick={() => setIsMenuOpen(false)}>
+                  <span className="w-[12px] h-[12px]" style={{ backgroundColor: isActive("/about") ? '#00E100' : 'rgb(55,65,81)' }} />
+                  About
+                </a>
+              </li>
+              <li>
+                <a className="flex items-center gap-2" href="/team" onClick={() => setIsMenuOpen(false)}>
+                  <span className="w-[12px] h-[12px]" style={{ backgroundColor: isActive("/team") ? '#00E100' : 'rgb(55,65,81)' }} />
+                  Team
+                </a>
+              </li>
+              <li>
+                <a className="flex items-center gap-2" href="/portfolio" onClick={() => setIsMenuOpen(false)}>
+                  <span className="w-[12px] h-[12px]" style={{ backgroundColor: isActive("/portfolio") ? '#00E100' : 'rgb(55,65,81)' }} />
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a className="flex items-center gap-2" href="/writing" onClick={() => setIsMenuOpen(false)}>
+                  <span className="w-[12px] h-[12px]" style={{ backgroundColor: isActive("/writing") ? '#00E100' : 'rgb(55,65,81)' }} />
+                  Writing
+                </a>
+              </li>
+              <li>
+                <a className="flex items-center gap-2" href="/oss" onClick={() => setIsMenuOpen(false)}>
+                  <span className="w-[12px] h-[12px]" style={{ backgroundColor: isActive("/oss") ? '#00E100' : 'rgb(55,65,81)' }} />
+                  Open Source
+                </a>
+              </li>
+              <li>
+                <a className="flex items-center gap-2" href="/careers" onClick={() => setIsMenuOpen(false)}>
+                  <span className="w-[12px] h-[12px]" style={{ backgroundColor: isActive("/careers") ? '#00E100' : 'rgb(55,65,81)' }} />
+                  Careers
+                </a>
+              </li>
+            </ul>
+
+            <div className="mt-8 h-px" style={{ background: 'rgba(255,255,255,.15)' }} />
+
+            <div className="mt-4 text-mono-12 uppercase opacity-80">LP Login</div>
+
+            <ul className="mt-4 flex flex-col gap-2">
+              <li><a href="/terms" onClick={() => setIsMenuOpen(false)}>Terms</a></li>
+              <li><a href="/disclosures" onClick={() => setIsMenuOpen(false)}>Disclosures</a></li>
+              <li><a href="/privacy" onClick={() => setIsMenuOpen(false)}>Privacy</a></li>
+              <li><a href="/privacy/ca" onClick={() => setIsMenuOpen(false)}>CA Privacy</a></li>
+              <li><a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li>
+              <li><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="https://warpcast.com" target="_blank" rel="noreferrer">Warpcast</a></li>
+              <li><a href="/contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+            </ul>
+
+            <div className="mt-8">
+              <span className="block w-[12px] h-[12px] bg-white" />
+            </div>
+          </nav>
+        </div>
+      )}
 
       {/* Desktop Header */}
       <div className="hidden lg:block fixed md:top-4 md:left-4 top-[20px] left-[20px] z-50 pointer-events-none w-full">

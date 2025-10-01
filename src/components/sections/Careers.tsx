@@ -227,100 +227,7 @@ function Sidebar({
   );
 }
 
-function MobileFilters({
-  query,
-  setQuery,
-  location,
-  setLocation,
-  selectedRoles,
-  setSelectedRoles,
-  paradigmOnly,
-  setParadigmOnly,
-}: MobileFiltersProps) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="md:hidden border border-gray-200">
-      <button
-        className="flex w-full justify-between items-center p-2"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-      >
-        <div className="font-mono text-xs uppercase font-medium">Filter By</div>
-        {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-      </button>
-      <div className={classNames("transition-all", open ? "p-2" : "h-0 overflow-hidden opacity-0")}> 
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-col gap-2">
-            <form className="block">
-              <div className="flex flex-col gap-1">
-                <div className="w-full relative">
-                  <span className="absolute left-2 top-2.5"><Search size={16} aria-hidden /></span>
-                  <input
-                    name="query"
-                    placeholder="Title or Company"
-                    className="block w-full border rounded pl-7 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black/10"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                  />
-                </div>
-              </div>
-            </form>
-            <div className="flex flex-col gap-1">
-              <div className="relative">
-                <div className="flex flex-col items-start">
-                  <div className="w-full relative">
-                    <span className="absolute left-2 top-2.5"><MapPin size={16} aria-hidden /></span>
-                    <input
-                      placeholder="Locations"
-                      className="block w-full border rounded pl-7 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black/10"
-                      value={location}
-                      onChange={(e) => setLocation(e.target.value)}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-1 font-mono text-xs">
-            <ul className="flex flex-col">
-              <li className="pb-2">
-                <label className="flex items-center gap-2 cursor-pointer select-none">
-                  <input
-                    type="checkbox"
-                    className="accent-black"
-                    checked={paradigmOnly}
-                    onChange={(e) => setParadigmOnly(e.target.checked)}
-                  />
-                  <span>Careers at Paradigm</span>
-                </label>
-              </li>
-            </ul>
-            <h2 className="font-semibold">Roles</h2>
-            <ul className="flex flex-col gap-1 max-h-[280px] overflow-auto pr-1">
-              {roles.map((r) => (
-                <li key={r} className="flex items-center gap-2">
-                  <label className="flex items-center gap-2 cursor-pointer select-none">
-                    <input
-                      type="checkbox"
-                      className="accent-black"
-                      checked={selectedRoles.includes(r)}
-                      onChange={(e) => {
-                        setSelectedRoles(
-                          e.target.checked ? [...selectedRoles, r] : selectedRoles.filter((p) => p !== r)
-                        );
-                      }}
-                    />
-                    <span>{r}</span>
-                  </label>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+// MobileFilters removed per request; desktop sidebar stays.
 
 function JobCard({ job }: JobCardProps) {
   return (
@@ -406,16 +313,7 @@ export default function Careers() {
               <p className="font-medium">Opportunities</p>
               <p>Browse through careers and opportunities in the Paradigm universe.</p>
             </div>
-            <MobileFilters
-              query={query}
-              setQuery={setQuery}
-              location={location}
-              setLocation={setLocation}
-              selectedRoles={selectedRoles}
-              setSelectedRoles={setSelectedRoles}
-              paradigmOnly={paradigmOnly}
-              setParadigmOnly={setParadigmOnly}
-            />
+            {/* Mobile filters removed */}
           </div>
 
           <div className="hidden md:block font-mono text-xs max-w-[300px] mb-4">
